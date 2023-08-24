@@ -34,6 +34,28 @@
         // *bonus: if this is the first element then print the elemnt in bold
         //         if this is the last element then print the element in pink
 
+        const numbers = []
+        for (let i = 1; i <= 4; i++) {
+             const number = parseInt(prompt(`Please enter number #${i}`))
+             numbers.push(number)
+         }        
+        function print_hr(element, index, arr) {
+            document.write(`<hr>`)
+            if (index == 0) 
+                document.write(`<p>item = <span style="color:green"><b>${element}</b></span>
+                                index = <span style="color:blue">${index}</span>
+                                arr = <span style="color:red">${arr}</span>`)            
+            else if (index == numbers.length - 1) 
+                document.write(`<p>item = <span style="color:pink">${element}</span>
+                                index = <span style="color:blue">${index}</span>
+                                arr = <span style="color:red">${arr}</span>`)            
+            else
+                document.write(`<p>item = <span style="color:green">${element}</span>
+                                index = <span style="color:blue">${index}</span>
+                                arr = <span style="color:red">${arr}</span>`)
+        }
+        numbers.forEach(print_hr)
+
     </script>
 
 </body>
