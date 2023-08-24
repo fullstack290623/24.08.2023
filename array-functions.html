@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array functions</title>
+</head>
+<body>
+    <hr />
+    <script>
+
+        const a = [1, 29, 3, 40, 5]
+        a.push(6)
+        a.push(7)
+        // a = [4,54,6] // ERROR
+        // a = 1 // ERROR
+        
+        function printElement(element, index, arr) {
+          //  document.write(`<b>${element} index: #${index} array: ${arr}</b> <br/>`);
+        }
+
+         for (let i = 0; i < a.length; i++) {
+             printElement(a[ i ], i, a)
+         }
+        
+        a.forEach(printElement);
+        // [1, 29, 3, 40, 5, 6, 7]
+        //  0  1   2  3  4  5  6
+
+        // read from the user 4 numbers
+        // push all of them into an array
+        // write a function called hrPrint (element, index, arr)
+        // call this function with the forEach loop
+        // inside hrPrint print  <hr> element in green, its index in blue, and the array in red
+
+    </script>
+
+</body>
+</html>
