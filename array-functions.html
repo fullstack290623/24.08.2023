@@ -13,9 +13,13 @@
         a.push(7)
         // a = [4,54,6] // ERROR
         // a = 1 // ERROR
-        
+
         function printElement(element, index, arr) {
             document.write(`<b>${element} index: #${index} array: ${arr}</b> <br/>`);
+        }
+        const b = [8, 9, 9, 9, 9]
+        for(let element in a) {
+            // ok to access array b
         }
 
          for (let i = 0; i < a.length; i++) {
@@ -23,6 +27,13 @@
          }
         
         a.forEach(printElement);
+        // **BONUS:
+        // a.forEach(function (element, index, arr) {
+        //     document.write(`<b>${element} index: #${index} array: ${arr}</b> <br/>`);
+        // });
+        // a.forEach(element, index, arr => 
+        //     document.write(`<b>${element} index: #${index} array: ${arr}</b> <br/>`));
+
         // [1, 29, 3, 40, 5, 6, 7]
         //  0  1   2  3  4  5  6
 
